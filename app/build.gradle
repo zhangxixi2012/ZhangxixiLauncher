@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion 34
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.mclauncher"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        
+        // 指定CPU架构（根据嵌入的JRE选择）
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    packagingOptions {
+        exclude "**/libjvm.so" // 如果嵌入自定义JRE需要此配置
+    }
+}
+
+dependencies {
+    // 基础依赖
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    
+    // UI 组件
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    
+    // 文件选择器（可选）
+    implementation 'com.github.hedzr:android-file-chooser:v1.2.0-final'
+    
+    // 异步任务处理
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    
+    // 终端输出处理（用于显示日志）
+    implementation 'com.jraska:console:1.2.0'
+    
+    // 存储访问框架
+    implementation 'androidx.documentfile:documentfile:1.0.1'
+    
+    // 网络请求（用于后续添加下载功能）
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    
+    // 本地Java环境支持（关键依赖）
+    implementation 'com.android.tools:r8:8.2.42'          // 需确认最新版本
+    implementation 'org.openjdk.jmc:flightrecorder:8.2.0' // JVM监控
+    
+    // 测试依赖
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

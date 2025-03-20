@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhanglauncher.are"><!--写入/删除您的SD卡中的内容-->
+	
+
+	<!-- 调整权限声明 -->
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" 
+		android:maxSdkVersion="28" />  <!-- 仅对 Android 9 及以下生效 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" 
+		android:maxSdkVersion="28" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:resizeableActivity="true">
+		android:requestLegacyExternalStorage="true"  <!-- 针对 Android 10 的临时豁免 -->
+		android:usesCleartextTraffic="true"         <!-- 允许 HTTP 通信 -->
+		
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+      <meta-data
+          android:name="android.max_aspect"
+          android:value="4.0"/>
+
+    </application>
+	
+</manifest>
