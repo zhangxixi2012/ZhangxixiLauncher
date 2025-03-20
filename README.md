@@ -1,7 +1,7 @@
 # ZhangxixiLauncher
 
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.9.20-blue.svg)](https://kotlinlang.org)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-MPL-2.0-green.svg)]
 
 非官方的Minecraft Java版安卓启动器，支持基础游戏启动和版本管理
 
