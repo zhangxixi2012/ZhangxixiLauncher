@@ -1,7 +1,29 @@
 # ZhangxixiLauncher
 
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.9.20-blue.svg)](https://kotlinlang.org)
-[![License](https://img.shields.io/badge/License-MPL-2.0-green.svg)]
+[![License](https://img.shields.io/badge/License-MPL%202.0-orange.svg)](https://opensource.org/licenses/MPL-2.0)
+
+非官方的Minecraft Java版安卓启动器（🚧 实验性项目）
+
+## 许可协议
+
+本项目采用 **Mozilla Public License 2.0** 授权，核心条款包括：
+
+- 允许自由使用、修改和分发
+- **修改后的源代码必须保持MPL-2.0协议**
+- 修改文件必须包含变更说明
+- 专利授权不可撤销
+
+完整协议内容请查看 [LICENSE](LICENSE) 文件
+
+## 开发者义务
+
+根据MPL-2.0要求，如果您修改代码并分发，必须：
+
+1. 在文件头保留原始版权声明
+2. 新增文件需包含MPL-2.0声明
+3. 在显著位置说明修改内容
+
 
 非官方的Minecraft Java版安卓启动器，支持基础游戏启动和版本管理
 
