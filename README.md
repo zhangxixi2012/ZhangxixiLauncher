@@ -3,7 +3,7 @@
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.9.20-blue.svg)](https://kotlinlang.org)
 [![License](https://img.shields.io/badge/License-MPL%202.0-orange.svg)](https://opensource.org/licenses/MPL-2.0)
 
-非官方的Minecraft Java版安卓启动器（🚧 实验性项目）
+非官方的Minecraft Java版安卓启动器
 
 ## 许可协议
 
@@ -48,8 +48,7 @@
 
 - Android 7.0+ (API 24)
 - 至少2GB可用存储空间
-- ARMv8/AArch64设备（推荐骁龙835以上）
-- 已安装OpenJDK 17（或集成JRE环境）
+- ARMv8/AArch64设备
 
 ## 安装指南
 
